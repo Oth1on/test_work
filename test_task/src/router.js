@@ -1,11 +1,11 @@
+import store from '@/store'
 import Vue from 'vue'
 import Router from 'vue-router'
 import MainPage from './views/MainPage.vue'
 import loginPage from './views/LoginPage.vue'
 import registerPage from './views/RegisterPage.vue'
-import store from '@/store'
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
   routes: [
@@ -19,17 +19,17 @@ export default new Router({
       },
       path: '/',
       name: 'mainPage',
-      component: () => import(/* webpackChunkName: "mainPage" */ './views/MainPage.vue'),
+      component: () => import(/* webpackChunkName: "mainPage" */ './views/MainPage.vue')
     },
     {
       path: '/login',
       name: 'loginPage',
-      component: () => import(/* webpackChunkName: "loginPage" */ './views/LoginPage.vue'),
+      component: () => import(/* webpackChunkName: "loginPage" */ './views/LoginPage.vue')
     },
     {
       path: '/register',
       name: 'registerPage',
-      component: () => import(/* webpackChunkName: "registerPage" */ './views/RegisterPage.vue'),
-    },
-  ],
-});
+      component: () => import(/* webpackChunkName: "registerPage" */ './views/RegisterPage.vue')
+    }
+  ]
+})
